@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloodWatch Kenya  —  Affected Areas</title>
+     <!-- Tailwindcss CDN Link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              storm: "#0F172A",
+              sky: "#0EA5E9",
+              amber: "#F59E0B",
+              danger: "#EF4444",
+              warning: "#F97316",
+              watch: "#EAB308",
+              card: "#1E293B",
+              border: "#334155",
+              muted: "#94A3B8",
+            },
+            fontFamily: {
+              display: ["Bebas Neue", "sans-serif"],
+              body: ["DM Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Google Fonts LInk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "DM Sans", sans-serif;
+      }
+    </style>
+
+</head>
+<body class="bg-storm text-slate-100 min-h-screen">
+    <!-- Navbar -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-storm/95 backdrop-blur border-b border-border h-16 flex items-center justify-between px-4 md:px-8"
+    >
+      <a href="index.html" class="flex items-center gap-2 no-underline">
+        <div
+          class="w-9 h-9 bg-sky rounded-lg flex items-center justify-center text-xl"
+        >
+          🌊
+        </div>
+        <span class="font-display text-2xl tracking-wide text-white">
+          Flood<span class="text-sky">Watch</span> Kenya
+        </span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-1 list-none">
+        <li>
+          <a
+            href="index.html"
+            class="text-muted text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-card hover:text-white transition"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="report.html"
+            class="text-muted text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-card hover:text-white transition"
+            >Report</a
+          >
+        </li>
+        <li>
+          <a
+            href="affected-areas.html"
+            class="text-sky text-sm font-medium px-3 py-1.5 rounded-lg bg-card"
+            >Affected Areas</a
+          >
+        </li>
+        <li>
+          <a
+            href="stay-safe.html"
+            class="text-muted text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-card hover:text-white transition"
+            >Stay Safe</a
+          >
+        </li>
+        <li>
+          <a
+            href="emergency.html"
+            class="text-muted text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-card hover:text-white transition"
+            >Emergency</a
+          >
+        </li>
+        <li>
+          <a
+            href="about.html"
+            class="text-muted text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-card hover:text-white transition"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="emergency.html"
+            class="text-white text-sm font-bold px-4 py-1.5 rounded-lg bg-danger hover:opacity-90 transition"
+            >🚨 999</a
+          >
+        </li>
+      </ul>
+
+      <button
+        id="hamburger"
+        onclick="toggleMenu()"
+        class="md:hidden flex flex-col gap-1.5 p-1 cursor-pointer bg-transparent border-none"
+      >
+        <span class="block w-6 h-0.5 bg-white rounded"></span>
+        <span class="block w-6 h-0.5 bg-white rounded"></span>
+        <span class="block w-6 h-0.5 bg-white rounded"></span>
+      </button>
+    </nav>
+
+      <!-- Menu for Mobile -->
+
+    <div
+      id="mobileMenu"
+      class="hidden bg-storm/98 backdrop-blur border-b border-border flex-col p-4 gap-2 fixed top-16 left-0 right-0 z-40"
+    >
+      <a
+        href="index.html"
+        class="text-muted text-sm font-medium px-4 py-3 rounded-lg hover:bg-card block transition"
+        >Home</a
+      >
+      <a
+        href="report.html"
+        class="text-muted text-sm font-medium px-4 py-3 rounded-lg hover:bg-card block transition"
+        >Report</a
+      >
+      <a
+        href="affected-areas.html"
+        class="text-sky text-sm font-medium px-4 py-3 rounded-lg bg-card block"
+        >Affected Areas</a
+      >
+      <a
+        href="stay-safe.html"
+        class="text-muted text-sm font-medium px-4 py-3 rounded-lg hover:bg-card block transition"
+        >Stay safe</a
+      >
+      <a
+        href="emergency.html"
+        class="text-muted text-sm font-medium px-4 py-3 rounded-lg hover:bg-card block transition"
+        >Emergency Help</a
+      >
+      <a
+        href="about.html"
+        class="text-muted text-sm font-medium px-4 py-3 rounded-lg hover:bg-card block transition"
+        >About us</a
+      >
+      <a
+        href="emergency.html"
+        class="text-white bg-danger font-bold text-center text-sm font-medium px-4 py-3 rounded-lg block"
+        >🚨 Emergency: 999 / 112</a
+      >
+    </div>
+
+    <!-- Main content -->
+     <main class="mt-16 px-4 md:px-8 lg:px-16 py-10 max-w-6xl mx-auto">
+        <span class="text-sky bg-sky/10 border border-sky/30 px-3 py-1 rounded-full mb-4 inline-block text-xs font-semibold uppercase tracking-widest"
+        >Live Flood Data</span>
+        <h1 class="font-display text-5xl md:text-6xl tracking-wide mb-3">Affected Areas</h1>
+        <p class="text-muted text-base leading-relaxed mb-8">Tracking the counties hit hardest by flooding across Kenya. Data is updated in real time by your community</p>
+
+        <select id="areaCountyFilter" class="bg-card border border-border rounded-xl text-white text-sm px-4 py-3 outline-none focus:border-sky transition cursor-pointer md:w-64" onchange="filterByCounty()">
+            <option value="">All Counties</option>
+          <option value="Nairobi">Nairobi</option>
+          <option value="Kisumu">Kisumu</option>
+          <option value="Mombasa">Mombasa</option>
+          <option value="Nakuru">Nakuru</option>
+          <option value="Tana River">Tana River</option>
+          <option value="Kilifi">Kilifi</option>
+          <option value="Garissa">Garissa</option>
+          <option value="Machakos">Machakos</option>
+          <option value="Bungoma">Bungoma</option>
+          <option value="Kakamega">Kakamega</option>
+          <option value="Siaya">Siaya</option>
+          <option value="Homa Bay">Homa Bay</option>
+          <option value="Migori">Migori</option>
+          <option value="Kericho">Kericho</option>
+          <option value="Uasin Gishu">Uasin Gishu</option>
+          <option value="Trans Nzoia">Trans Nzoia</option>
+          <option value="Turkana">Turkana</option>
+          <option value="Marsabit">Marsabit</option>
+          <option value="Meru">Meru</option>
+          <option value="Embu">Embu</option>
+          <option value="Kitui">Kitui</option>
+          <option value="Makueni">Makueni</option>
+          <option value="Nyeri">Nyeri</option>
+          <option value="Kiambu">Kiambu</option>
+          <option value="Kajiado">Kajiado</option>
+          <option value="Narok">Narok</option>
+          <option value="Kwale">Kwale</option>
+          <option value="Lamu">Lamu</option>
+          <option value="Mandera">Mandera</option>
+          <option value="Wajir">Wajir</option>
+          <option value="Baringo">Baringo</option>
+          <option value="Vihiga">Vihiga</option>
+        </select>
+
+        <!-- Affected areas cards -->
+         <section class="mt-10 mb-10">
+            <h2 class="font-display text-2xl tracking-wide mb-6">Most affected Counties</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+
+                
+                
+                <div class="bg-card border border-border rounded-2xl overflow-hidden border-l-4 ">
+                    <div class="p-5">
+                    <!-- <img src="images/arealfloodingview.jpg" alt="flooding in Nairobi" class="w-full h-50 object-cover"> -->
+                    <span class="font-display text-4xl text-muted">#1</span>
+                    <h3 class="font-bold text-lg">Nairobi</h3>
+                    <p class="text-sky text-sm font-semibold">33 Deaths counted so far, the highest in the country. 3,500 households affected</p>
+                    <span class="text-xs font-bold px-3 py-1 rounded-full bg-red-500/20 text-red-400">🔴 DANGER</span>
+                    <p class="text-muted text-xs leading-relaxed mt-3">Nairobi received a full month's worth of rain in 24 hours. Worst hit areas: Kibra, Mathare, Embakasi, Westlands, Dagoretti</p>
+
+                    </div>
+                
+
+                </div>
+
+                <div class="bg-card border border-border rounded-2xl overflow-hidden border-l-4">
+                    <div class="p-5">
+                     <span class="font-display text-4xl text-muted">#2</span>
+                    <h3 class="font-bold text-lg">Kisumu</h3>
+                    <p class="text-sky text-sm font-semibold">Over 2,000 families displaced in Nyakach Sub-county</p>
+                    <span class="text-xs font-bold px-3 py-1 rounded-full bg-red-500/20 text-red-400">🔴 DANGER</span>
+                    <p class="text-muted text-xs leading-relaxed mt-3">381 households impacted after the Sondu-Miriu River burst its banks</p>
+
+                    </div>
+                
+
+                </div>
+
+                <div class="bg-card border border-border rounded-2xl overflow-hidden border-l-4">
+                    <div class="p-5">
+                        <span class="font-display text-4xl text-muted">#3</span>
+                    <h3 class="font-bold text-lg">Homa Bay</h3>
+                    <p class="text-sky text-sm font-semibold">381 households affected in Kobala and Kobuya locations</p>
+                    <span class="text-xs font-bold px-3 py-1 rounded-full bg-orange-500/20 text-orange-400">🟠 WARNING </span>
+                    <p class="text-muted text-xs leading-relaxed mt-3">Kenya Red Cross conducting active assessments in Rachuonyo North</p>
+                
+
+                    </div>
+
+                </div>
+
+                <div class="bg-card border border-border rounded-2xl overflow-hidden border-l-4">
+                    <div class="p-5">
+                     <span class="font-display text-4xl text-muted">#4</span>
+                    <h3 class="font-bold text-lg">Bungoma</h3>
+                    <p class="text-sky text-sm font-semibold">22 families in Chepyuk area of Mt Elgon displaced after homes collapsed</p>
+                    <span class="text-xs font-bold px-3 py-1 rounded-full bg-orange-500/20 text-orange-400">🟠 WARNING</span>
+                    <p class="text-muted text-xs leading-relaxed mt-3">Families forced to move to higher ground</p>
+                
+
+                    </div>
+
+                </div>
+
+                <div class="bg-card border border-border rounded-2xl overflow-hidden border-l-4">
+                   <div class="p-5">
+                     <span class="font-display text-4xl text-muted">#5</span>
+                    <h3 class="font-bold text-lg">Central Kenya (Embu, Meru, Kiambu etc...)</h3>
+                    <p class="text-sky text-sm font-semibold">Over 80 households affected across Central Kenya</p>
+                    <span class="text-xs font-bold px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-400">🟡Watch</span>
+                    <p class="text-muted text-xs leading-relaxed mt-3">Kenya Red Cross warns numbers could rise as rains persist</p>
+
+                   </div>
+                
+
+                </div>
+
+                <div class="bg-card border border-border rounded-2xl overflow-hidden border-l-4">
+                   <div class="p-5">
+                     <span class="font-display text-4xl text-muted">#6</span>
+                    <h3 class="font-bold text-lg">Nakuru</h3>
+                    <p class="text-sky text-sm font-semibold">5,000+ people displaced</p>
+                    <span class="text-xs font-bold px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-400">🟡Watch</span>
+                    <p class="text-muted text-xs leading-relaxed mt-3">Flash floods in low-lying estates. Mai Mahiu area remains high risk.</p>
+
+                   </div>
+                </div>
+
+            </div>
+
+            
+
+         </section>
+
+         <section class="border-t border-border pt-8">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="font-display text-2xl tracking-wide">All Active Flood Reports</h2>
+                <span id="areaReportCount" class="bg-sky/10 text-sky text-xs font-bold px-3 py-1 rounded-full">
+                  0 Active 
+                </span>
+
+            </div>
+
+            <div id="areaReportsList" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            </div>
+
+            <div id="areaEmptyState" class="hidden text-center py-16">
+                <p class="text-5xl mb-4">✅</p>
+                 <h3 class="text-lg font-semibold mb-2">No reports found</h3>
+                 <p class="text-muted text-sm">Try selecting a different county or check back later.</p>
+
+            </div>
+
+         </section>
+
+     </main>
+<!-- Footer -->
+ <footer
+      class="bg-card border-t border-t border-border px-4 md:px-8 lg:px-16 py-10 mt-6"
+    >
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <p class="font-display text-2xl tracking-wide mb-2">
+              Flood<span class="text-sky">Watch</span>Kenya
+            </p>
+            <p class="text-muted text-sm leading-relaxed">
+              A community-powered flood early warning system built for Kenyans,
+              by Kenyans. No one should be caught off guard.
+            </p>
+          </div>
+
+          <div>
+            <h4
+              class="text-xs uppercase tracking-wide text-muted font-semibold mb-4"
+            >
+              Pages
+            </h4>
+            <ul class="flex flex-col gap-2 list-none">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-muted text-sm hover:text-sky transition no-underline"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="report.html"
+                  class="text-muted text-sm hover:text-sky transition no-underline"
+                  >Report a flood.</a
+                >
+              </li>
+              <li>
+                <a
+                  href="affected-areas.html"
+                  class="text-sky text-sm hover:text-sky transition no-underline"
+                  >Affected Areas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="stay-safe.html"
+                  class="text-muted text-sm hover:text-sky transition no-underline"
+                  >Stay Safe Guide</a
+                >
+              </li>
+              <li>
+                <a
+                  href="emergency.html"
+                  class="text-muted text-sm hover:text-sky transition no-underline"
+                  >Emergency Help</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-muted text-sm hover:text-sky transition no-underline"
+                  >About us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-danger/10 border border-danger/30 rounded-2xl p-6 text-center"
+          >
+            <p class="text-muted text-xs uppercase tracking-wide mb-1">
+              Kenya Emergency Line
+            </p>
+            <p class="font-display text-5xl text-danger tracking-widest mb-1">
+              999
+            </p>
+            <p class="text-muted text-xs mb-3">
+              Also dial 112 from any network
+            </p>
+            <p class="text-white text-sm font-semibold">Kenya Red Cross</p>
+            <p class="font-display text-2xl text-sky">1199</p>
+          </div>
+        </div>
+
+        <div class="border-t border-border pt-6 text-center text-muted text-xs">
+          © 2024 FloodWatch Kenya — Built to save lives 🌊 &nbsp;|&nbsp; A
+          community project for a safer Kenya
+        </div>
+      </div>
+    </footer>
+
+
+
+    <!-- External JS -->
+    <script src="js/affectedareas.js"></script>
+</body>
+
+</html>
