@@ -282,7 +282,7 @@ function toggleMenu() {
 
 //Fetching weather from openweather api
 //THis fetches live weatcher data for nairobi
-//dummy data
+
 async function fetchWeather() {
   const API_KEY = 'fe554f8a2204ce05c44ebc8abeabd693'
   const city = 'Nairobi';
