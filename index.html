@@ -7,6 +7,31 @@
     <!-- Tailwindcss CDN Link -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              storm: "#0F172A",
+              sky: "#0EA5E9",
+              amber: "#F59E0B",
+              danger: "#EF4444",
+              warning: "#F97316",
+              watch: "#EAB308",
+              card: "#1E293B",
+              border: "#334155",
+              muted: "#94A3B8",
+            },
+            fontFamily: {
+              display: ["Bebas Neue", "sans-serif"],
+              body: ["DM Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+
     <!-- Custom CSS  -->
     <style>
       body {
@@ -80,30 +105,6 @@
         border-radius: 3px;
       }
     </style>
-
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              storm: "#0F172A",
-              sky: "#0EA5E9",
-              amber: "#F59E0B",
-              danger: "#EF4444",
-              warning: "#F97316",
-              watch: "#EAB308",
-              card: "#1E293B",
-              border: "#334155",
-              muted: "#94A3B8",
-            },
-            fontFamily: {
-              display: ["Bebas Neue", "sans-serif"],
-              body: ["DM Sans", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
 
     <!-- Google Fonts LInk -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -204,43 +205,43 @@
       >
       <a
         href="report.html"
-        class="text-sky text-sm font-medium px-4 py-3 rounded-lg bg-card block"
+        class="text-muted text-sm font-medium px-4 py-3 rounded-lg hover:bg-card block transition"
         >Report</a
       >
       <a
         href="affected-areas.html"
-        class="text-sky text-sm font-medium px-4 py-3 rounded-lg bg-card block"
+        class="text-muted text-sm font-medium px-4 py-3 rounded-lg hover:bg-card block transition"
         >Affected Areas</a
       >
       <a
         href="stay-safe.html"
-        class="text-sky text-sm font-medium px-4 py-3 rounded-lg bg-card block"
+        class="text-muted text-sm font-medium px-4 py-3  rounded-lg hover:bg-card block transition"
         >Stay safe</a
       >
       <a
         href="emergency.html"
-        class="text-sky text-sm font-medium px-4 py-3 rounded-lg bg-card block"
+        class="text-muted text-sm font-medium px-4 py-3 rounded-lg hover:bg-card block transition"
         >Emergency Help</a
       >
       <a
         href="about.html"
-        class="text-sky text-sm font-medium px-4 py-3 rounded-lg bg-card block"
+        class="text-muted text-sm font-medium px-4 py-3 rounded-lg hover:bg-card block transition"
         >About us</a
       >
       <a
         href="emergency.html"
-        class="text-sky text-sm font-medium px-4 py-3 rounded-lg bg-card block"
+        class="text-muted text-sm font-medium px-4 py-3 rounded-lg hover:bg-card block transition"
         >🚨 Emergency: 999 / 112</a
       >
     </div>
 
     <!-- Hero SEction -->
     <section
-      class="hero-bg pt-16 pb-10 px-4 md:px-b lg:px-16 min-h-[75vh] flex flex-col justify-end"
+      class="hero-bg pt-16 pb-10 px-4 md:px-8 lg:px-16 min-h-[75vh] flex flex-col justify-end"
     >
-      <div class="maz-w-3xl">
+      <div class="max-w-3xl">
         <div
-          class="inline-flex items-center gap-2 bg-sky/10 border border-sky/30 text-sky text-xs font-semibold px-3py-1.5 rounded-full mb-4 uppercase tracking-wide"
+          class="inline-flex items-center gap-2 bg-sky/10 border border-sky/30 text-sky text-xs font-semibold px-3 py-1.5 rounded-full mb-4 uppercase tracking-wide"
         >
           <span class="w-2 h-2 bg-sky rounded-full pulse-dot"></span>
           Live Community Alerts
@@ -267,12 +268,12 @@
           >
           <a
             href="emergency.html"
-            class="bg-danger text-white font-bold text-sm px-6 py-3 rounded-xl hover:opacity/90 transition no-underline"
+            class="bg-danger text-white font-bold text-sm px-6 py-3 rounded-xl hover:opacity-90 transition no-underline"
             >🚨 Emergency Help</a
           >
           <a
             href="stay-safe.html"
-            class="bg-card border border-border text-white font-bold text-sm px-6 py-3 rounded-xl hover:opacity/90 transition no-underline"
+            class="bg-card border border-border text-white font-bold text-sm px-6 py-3 rounded-xl hover:opacity-90 transition no-underline"
             >🛡️ Stay Safe Guide</a
           >
         </div>
@@ -280,7 +281,7 @@
         <!-- Weather Banner -->
         <div
           id="weatherBanner"
-          class="bg-card/80 border border-border border-1-4 border-1-sky rounded-xl p-4 flex items-center gap-4 flex-wrap max-w-xl"
+          class="bg-card/80 border border-border  border-l-4 border-l-sky rounded-xl p-4 flex items-center gap-4 flex-wrap max-w-xl"
         >
           <span id="weatherIcon" class="text-3xl">🌤️</span>
           <div class="flex-1">
@@ -320,7 +321,7 @@
         >
           <p
             id="statWarning"
-            class="font-display text-4xl md:text-5xl text-danger mb-1"
+            class="font-display text-4xl md:text-5xl text-warning mb-1"
           >
             0
           </p>
@@ -334,7 +335,7 @@
         >
           <p
             id="statWatch"
-            class="font-display text-4xl md:text-5xl text-danger mb-1"
+            class="font-display text-4xl md:text-5xl text-sky mb-1"
           >
             0
           </p>
@@ -447,13 +448,13 @@
         </h2>
         <span
           id="reportCount"
-          classs="bg-sky/10 text-sky text-xs font-bold px-3 py-1 rounded-full"
+          class="bg-sky/10 text-sky text-xs font-bold px-3 py-1 rounded-full"
         >
           0 Active</span
         >
       </div>
 
-      <div id="reportList" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+      <div id="reportsList" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
 
       <div id="emptyState" class="hidden text-center py-16">
         <p class="text-5xl mb-4">✅</p>
@@ -470,8 +471,10 @@
       <h2 class="font-display text-3xl tracking-wide text-center mb-8">
         How FloodWatch Kenya Works
       </h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
         <div class="bg-card border border-border rounded-2xl p-6 text-center">
+
           <div class="text-5xl mb-4">📍</div>
           <h3 class="font-semibold text-lg mb-2">Step 1: Report</h3>
           <p class="text-muted text-sm leading-relaxed">
@@ -479,13 +482,18 @@
             a description, and the severity level.
           </p>
 
+        </div>
+
+        <div class="bg-card border border-border rounded-2xl p-6 text-center">
           <div class="text-5xl mb-4">✅</div>
           <h3 class="font-semibold text-lg mb-2">Step 2: Confirm</h3>
           <p class="text-muted text-sm leading-relaxed">
             Neighbours in the same area confirm the report. More confirmations
             automatically raise the severity level.
           </p>
+        </div>
 
+        <div class="bg-card border border-border rounded-2xl p-6 text-center">
           <div class="text-5xl mb-4">🔔</div>
           <h3 class="font-semibold text-lg mb-2">Step 3: Stay Safe</h3>
           <p class="text-muted text-sm leading-relaxed">
@@ -493,6 +501,7 @@
             emergency contacts to protect their families.
           </p>
         </div>
+
       </div>
     </section>
 
