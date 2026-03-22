@@ -150,3 +150,25 @@ countyContacts.innerHTML = contacts.map(contact => {
 }).join('');
 
 }
+
+function filterContacts() {
+    const selectedCounty = document.getElementById('countyContactFilter').value
+
+    const contacts = countyContacts.filter(contact =>
+  contact.county === selectedCounty || contact.county === 'All Counties'
+);
+renderContacts(contacts);
+
+}
+
+//Function for hamburger button
+function toggleMenu(){
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+    menu.classList.toggle('flex');
+}
+
+//Initializing the page
+document.addEventListener('DOMContentLoaded', () => {
+  renderContacts(countyContacts)
+})
