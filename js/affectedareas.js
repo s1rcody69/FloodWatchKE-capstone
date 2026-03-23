@@ -148,7 +148,7 @@ function renderAreaReports(reports){
    areaReportsList.innerHTML = reports.map((report, index)=>{
         const colors =  getSeverityClasses(report.severity);
         return `
-  <div class="bg-card border border-border ${colors.border} border-l-4 
+  <div class="bg-card border border-border ${colors.border}
               rounded-2xl p-5 hover:-translate-y-0.5 hover:border-sky 
               transition-all fade-up">
 
