@@ -1,0 +1,488 @@
+About · HTML Copy
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FloodWatch Kenya — About Us</title>
+    <!-- Tilwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              storm: "#0F172A",
+              sky: "#0EA5E9",
+              amber: "#F59E0B",
+              danger: "#EF4444",
+              warning: "#F97316",
+              watch: "#EAB308",
+              card: "#1E293B",
+              border: "#334155",
+              muted: "#94A3B8",
+            },
+            fontFamily: {
+              display: ["Bebas Neue", "sans-serif"],
+              body: ["DM Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("mobileMenu");
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("flex");
+      }
+    </script>
+    <!-- Google Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas Neue&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "DM Sans", sans-serif;
+      }
+
+      .team-photo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 1rem;
+        border: 3px solid #0ea5e9;
+      }
+
+      .team-photo-placeholder {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 3px solid #0ea5e9;
+        background: #1e293b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        font-size: 2.5rem;
+      }
+    </style>
+  </head>
+  <body class="bg-storm text-slate-100 min-h-screen">
+    <!-- Navbar -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-storm/95 backdrop-blur border-b border-border h-16 flex items-center justify-between px-4 md:px-8"
+    >
+      <a href="index.html" class="flex items-center gap-2 no-underline">
+        <div
+          class="w-9 h-9 bg-sky rounded-lg flex items-center justify-center text-xl"
+        >
+          🌊
+        </div>
+        <span class="font-display text-2xl tracking-wide text-white"
+          >Flood<span class="text-sky">Watch</span> Kenya</span
+        >
+      </a>
+      <ul class="hidden md:flex items-center gap-1 list-none">
+        <li>
+          <a
+            href="index.html"
+            class="text-muted text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-card hover:text-white transition"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="report.html"
+            class="text-muted text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-card hover:text-white transition"
+            >Report</a
+          >
+        </li>
+        <li>
+          <a
+            href="affected-areas.html"
+            class="text-muted text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-card hover:text-white transition"
+            >Affected Areas</a
+          >
+        </li>
+        <li>
+          <a
+            href="stay-safe.html"
+            class="text-muted text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-card hover:text-white transition"
+            >Stay Safe</a
+          >
+        </li>
+        <li>
+          <a
+            href="emergency.html"
+            class="text-muted text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-card hover:text-white transition"
+            >Emergency</a
+          >
+        </li>
+        <li>
+          <a
+            href="about.html"
+            class="text-sky text-sm font-medium px-3 py-1.5 rounded-lg bg-card"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="emergency.html"
+            class="text-white text-sm font-bold px-4 py-1.5 rounded-lg bg-danger hover:opacity-90 transition"
+            >🚨 999</a
+          >
+        </li>
+      </ul>
+      <button
+        id="hamburger"
+        onclick="toggleMenu()"
+        class="md:hidden flex flex-col gap-1.5 p-1 cursor-pointer bg-transparent border-none"
+      >
+        <span class="block w-6 h-0.5 bg-white rounded"></span>
+        <span class="block w-6 h-0.5 bg-white rounded"></span>
+        <span class="block w-6 h-0.5 bg-white rounded"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobileMenu"
+      class="hidden fixed top-16 left-0 right-0 z-40 bg-storm/98 backdrop-blur border-b border-border flex-col p-4 gap-2"
+    >
+      <a
+        href="index.html"
+        class="text-muted text-sm font-medium px-4 py-3 rounded-lg hover:bg-card block transition"
+        >Home</a
+      >
+      <a
+        href="report.html"
+        class="text-muted text-sm font-medium px-4 py-3 rounded-lg hover:bg-card block transition"
+        >Report</a
+      >
+      <a
+        href="affected-areas.html"
+        class="text-muted text-sm font-medium px-4 py-3 rounded-lg hover:bg-card block transition"
+        >Affected Areas</a
+      >
+      <a
+        href="stay-safe.html"
+        class="text-muted text-sm font-medium px-4 py-3 rounded-lg hover:bg-card block transition"
+        >Stay Safe</a
+      >
+      <a
+        href="emergency.html"
+        class="text-muted text-sm font-medium px-4 py-3 rounded-lg hover:bg-card block transition"
+        >Emergency Help</a
+      >
+      <a
+        href="about.html"
+        class="text-sky text-sm font-medium px-4 py-3 rounded-lg bg-card block"
+        >About Us</a
+      >
+      <a
+        href="emergency.html"
+        class="text-white bg-danger font-bold text-center text-sm px-4 py-3 rounded-lg block"
+        >🚨 Emergency: 999 / 112</a
+      >
+    </div>
+
+    <!-- Main content -->
+    <main class="mt-16 px-4 md:px-8 lg:px-16 py-10 max-w-6xl mx-auto">
+      <span
+        class="text-sky bg-sky/10 border border-sky/30 px-3 py-1 rounded-full mb-4 inline-block text-xs font-semibold uppercase tracking-widest"
+        >About FloodWatch Kenya</span
+      >
+      <h1 class="font-display text-5xl md:text-6xl tracking-wide mb-4">
+        OUR STORY
+      </h1>
+
+      <img
+        src="https://images.unsplash.com/photo-1547683905-f686c993aae5?w=1400&q=80"
+        alt="Flooding in Kenya"
+        class="w-full h-48 md:h-72 object-cover rounded-2xl mb-6"
+      />
+
+      <p class="text-muted text-base leading-relaxed mb-4">
+        Every year, Kenyans lose their lives, homes and livelihoods to floods
+        that could have been survived with just a little more warning. In 2026
+        alone, over 66 people were killed and more than 50,000 were displaced
+        across 17 counties — leaving thousands of families with nothing
+        overnight. The tragedy is not just the floods themselves, but the
+        silence before them.
+      </p>
+      <p class="text-muted text-base leading-relaxed mb-10">
+        FloodWatch Kenya was built to break that silence. We are a
+        community-powered early warning platform that puts life-saving flood
+        information directly in the hands of every Kenyan with a smartphone. No
+        government infrastructure needed. No expensive equipment. Just
+        neighbours looking out for neighbours — reporting, confirming, and
+        sharing alerts in real time so that no family is ever caught off guard
+        again.
+      </p>
+
+      <!-- 2026 CRISIS STATS -->
+      <section class="mb-10 border-t border-border pt-8">
+        <h2 class="font-display text-2xl tracking-wide mb-1">
+          The 2026 Kenya Flood Crisis
+        </h2>
+        <p class="text-muted text-sm mb-10">
+          These are not just numbers. These are Kenyan families.
+        </p>
+
+        <div class="flex flex-col divide-y divide-border">
+          <div class="flex items-center justify-between py-5 gap-4">
+            <div>
+              <p class="text-white font-semibold text-base">Lives Lost</p>
+              <p class="text-muted text-sm mt-0.5">
+                Since March 6, 2026 — Nairobi recorded the highest death toll in
+                the country with 33 confirmed fatalities.
+              </p>
+            </div>
+            <p class="font-display text-5xl text-danger flex-shrink-0">66+</p>
+          </div>
+
+          <div class="flex items-center justify-between py-5 gap-4">
+            <div>
+              <p class="text-white font-semibold text-base">People Displaced</p>
+              <p class="text-muted text-sm mt-0.5">
+                Tens of thousands left homeless overnight across Nairobi,
+                Kisumu, Homa Bay, Bungoma and Central Kenya counties.
+              </p>
+            </div>
+            <p class="font-display text-5xl text-warning flex-shrink-0">50K+</p>
+          </div>
+
+          <div class="flex items-center justify-between py-5 gap-4">
+            <div>
+              <p class="text-white font-semibold text-base">
+                Counties Affected
+              </p>
+              <p class="text-muted text-sm mt-0.5">
+                Flooding was reported across 17 of Kenya's 47 counties — from
+                Turkana in the north to Kwale on the coast.
+              </p>
+            </div>
+            <p class="font-display text-5xl text-sky flex-shrink-0">17</p>
+          </div>
+
+          <div class="flex items-center justify-between py-5 gap-4">
+            <div>
+              <p class="text-white font-semibold text-base">
+                Families Made Homeless
+              </p>
+              <p class="text-muted text-sm mt-0.5">
+                Over 2,624 families lost their homes entirely — many in informal
+                settlements with no insurance, savings, or safety net.
+              </p>
+            </div>
+            <p class="font-display text-5xl text-watch flex-shrink-0">2,624+</p>
+          </div>
+
+          <div class="flex items-center justify-between py-5 gap-4">
+            <div>
+              <p class="text-white font-semibold text-base">
+                Nairobi — Worst Hit
+              </p>
+              <p class="text-muted text-sm mt-0.5">
+                Kibra, Mathare, Embakasi, Westlands and Dagoretti were hardest
+                hit. The city received a full month's worth of rain in just 24
+                hours.
+              </p>
+            </div>
+            <p class="font-display text-5xl text-danger flex-shrink-0">33</p>
+          </div>
+
+          <div class="flex items-center justify-between py-5 gap-4">
+            <div>
+              <p class="text-white font-semibold text-base">
+                Kisumu — River Overflow
+              </p>
+              <p class="text-muted text-sm mt-0.5">
+                The Sondu-Miriu River burst its banks displacing over 2,000
+                families in Nyakach Sub-county and flooding 381 households.
+              </p>
+            </div>
+            <p class="font-display text-5xl text-sky flex-shrink-0">2K+</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MEET THE TEAM -->
+      <section class="mb-10 border-t border-border pt-8">
+        <h2 class="font-display text-2xl tracking-wide mb-2">Meet The Team</h2>
+        <p class="text-muted text-sm mb-8">
+          The people behind FloodWatch Kenya — built with passion, purpose and a
+          deep love for this country.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- CEO -->
+          <div class="bg-card border border-border rounded-2xl p-6 text-center">
+            <img
+              src="images/developer.jpg"
+              alt="Jane Wanjiru"
+              class="team-photo ceo-ring"
+            />
+
+            <span
+              class="inline-block bg-amber/20 text-amber text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wide"
+            >
+              CEO & Founder
+            </span>
+            <h3 class="font-semibold text-lg mb-1">Jane Wanjiru</h3>
+            <p class="text-muted text-xs mb-4">Nairobi, Kenya</p>
+            <p class="text-muted text-sm leading-relaxed">
+              The visionary behind FloodWatch Kenya. Jane identified the
+              critical gap in community flood communication after witnessing the
+              2026 Nairobi floods firsthand and made it her mission to build a
+              solution that every Kenyan could access and use.
+            </p>
+            
+          </div>
+
+          <!-- Developer -->
+          <div class="bg-card border border-border rounded-2xl p-6 text-center">
+            <img
+              src="images/ceopicture.jpg"
+              alt="Brian Otieno"
+              class="team-photo"
+            />
+
+            <span
+              class="inline-block bg-sky/20 text-sky text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wide"
+            >
+              Lead Developer
+            </span>
+            <h3 class="font-semibold text-lg mb-1">Brian Otieno</h3>
+            <p class="text-muted text-xs mb-4">Kisumu, Kenya</p>
+            <p class="text-muted text-sm leading-relaxed">
+              Built the entire FloodWatch Kenya platform from scratch using
+              HTML, CSS, JavaScript and Tailwind CSS. Brian designed the
+              localStorage data architecture and the real-time report confirmation system.
+            </p>
+            
+          </div>
+
+          <!-- Designer -->
+          <div class="bg-card border border-border rounded-2xl p-6 text-center">
+            <img
+              src="images/designer.jpg"
+              alt="Amina Hassan"
+              class="team-photo"
+            />
+
+            <span
+              class="inline-block bg-green-500/20 text-green-400 text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wide"
+            >
+              UI/UX Designer
+            </span>
+            <h3 class="font-semibold text-lg mb-1">Amina Hassan</h3>
+            <p class="text-muted text-xs mb-4">Mombasa, Kenya</p>
+            <p class="text-muted text-sm leading-relaxed">
+              Designed the entire FloodWatch Kenya user experience with
+              low-bandwidth users and accessibility at the forefront. Amina
+              ensured that the app is fast, readable and usable for every Kenyan
+              regardless of their device or data connection.
+            </p>
+           
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-card border-t border-border px-4 md:px-8 lg:px-16 py-10 mt-6"
+    >
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <p class="font-display text-2xl tracking-wide mb-2">
+              Flood<span class="text-sky">Watch</span> Kenya
+            </p>
+            <p class="text-muted text-sm leading-relaxed">
+              A community-powered flood early warning system built for Kenyans,
+              by Kenyans. No one should be caught off guard.
+            </p>
+          </div>
+          <div>
+            <h4
+              class="text-xs uppercase tracking-wide text-muted font-semibold mb-4"
+            >
+              Pages
+            </h4>
+            <ul class="flex flex-col gap-2 list-none">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-muted text-sm hover:text-sky transition no-underline"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="report.html"
+                  class="text-muted text-sm hover:text-sky transition no-underline"
+                  >Report a Flood</a
+                >
+              </li>
+              <li>
+                <a
+                  href="affected-areas.html"
+                  class="text-muted text-sm hover:text-sky transition no-underline"
+                  >Affected Areas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="stay-safe.html"
+                  class="text-muted text-sm hover:text-sky transition no-underline"
+                  >Stay Safe Guide</a
+                >
+              </li>
+              <li>
+                <a
+                  href="emergency.html"
+                  class="text-muted text-sm hover:text-sky transition no-underline"
+                  >Emergency Help</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-sky text-sm hover:text-sky transition no-underline"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="bg-danger/10 border border-danger/30 rounded-2xl p-6 text-center"
+          >
+            <p class="text-muted text-xs uppercase tracking-wide mb-1">
+              Kenya Emergency Line
+            </p>
+            <p class="font-display text-5xl text-danger tracking-widest mb-1">
+              999
+            </p>
+            <p class="text-muted text-xs mb-3">
+              Also dial 112 from any network
+            </p>
+            <p class="text-white text-sm font-semibold">Kenya Red Cross</p>
+            <p class="font-display text-2xl text-sky">1199</p>
+          </div>
+        </div>
+        <div class="border-t border-border pt-6 text-center text-muted text-xs">
+          © 2026 FloodWatch Kenya — Built to save lives 🌊 &nbsp;|&nbsp; A
+          community project for a safer Kenya
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
