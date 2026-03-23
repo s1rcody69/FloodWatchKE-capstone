@@ -161,10 +161,10 @@ function renderReports(reports) {
     const alreadyConfirmed = confirmedIds.includes(report.id);
 
     return `
-      <div class="bg-card border border-border ${colors.border} border-l-4 rounded-2xl p-5 hover:-translate-y-0.5 hover:border-sky transition-all cursor-pointer fade-up"
+      <div class="bg-card border border-border ${colors.border}  rounded-2xl p-5 hover:-translate-y-0.5 hover:border-sky transition-all cursor-pointer fade-up"
            style="animation-delay: ${index * 0.07}s">
  
-        <!-- Top row: location + severity badge -->
+        
         <div class="flex items-start justify-between gap-3 mb-3">
           <div>
             <p class="font-semibold text-base">📍 ${report.area}</p>
@@ -175,10 +175,10 @@ function renderReports(reports) {
           </span>
         </div>
  
-        <!-- Description -->
+       
         <p class="text-muted text-sm leading-relaxed mb-4">${report.description}</p>
  
-        <!-- Bottom row: meta info + confirm button -->
+       
         <div class="flex items-center justify-between flex-wrap gap-2">
           <div class="flex items-center gap-4">
             <span class="text-muted text-xs">✅ ${report.confirmations} confirmed</span>
