@@ -87,10 +87,10 @@ function getAllReports() {
 // Returns  a human-readable label for each severity level including the Kiswahili for every person to understand
 
 function getSeverityLabels(severity) {
-  if(severity === 'danger') return '🔴 DANGER — Hatari';
-  if(severity === 'warning') return '🟠 WARNING — Tahadhari';
+  if(severity === 'danger') return 'DANGER — Hatari';
+  if(severity === 'warning') return ' WARNING — Tahadhari';
 
-  return '🟡 WATCH — Angalia'
+  return 'WATCH — Angalia'
 }
 
 //Severity color with tailwindcss classes
@@ -167,7 +167,7 @@ function renderReports(reports) {
         
         <div class="flex items-start justify-between gap-3 mb-3">
           <div>
-            <p class="font-semibold text-base">📍 ${report.area}</p>
+            <p class="font-semibold text-base"> ${report.area}</p>
             <p class="text-muted text-xs mt-0.5">${report.county} County</p>
           </div>
           <span class="text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap ${colors.badge}">
@@ -181,8 +181,8 @@ function renderReports(reports) {
        
         <div class="flex items-center justify-between flex-wrap gap-2">
           <div class="flex items-center gap-4">
-            <span class="text-muted text-xs">✅ ${report.confirmations} confirmed</span>
-            <span class="text-muted text-xs">🕐 ${timeAgo(report.time)}</span>
+            <span class="text-muted text-xs"> ${report.confirmations} confirmed</span>
+            <span class="text-muted text-xs"> ${timeAgo(report.time)}</span>
             <span class="text-muted text-xs">👤 ${report.reporter}</span>
           </div>
           <button
