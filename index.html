@@ -162,7 +162,7 @@
           <a
             href="emergency.html"
             class="text-white text-sm font-bold px-4 py-1.5 rounded-lg bg-danger hover:opacity-90 transition"
-            >🚨 999</a
+            > 999</a
           >
         </li>
       </ul>
@@ -249,17 +249,17 @@
           <a
             href="report.html"
             class="bg-sky text-storm font-bold text-sm px-6 py-3 rounded-xl hover:opacity-90 transition no-underline"
-            > Report a Flood</a>
+            ><i data-lucide="triangle-alert" class="m-auto"></i>   Report a Flood</a>
           
           <a
             href="emergency.html"
             class="bg-danger text-white font-bold text-sm px-6 py-3 rounded-xl hover:opacity-90 transition no-underline"
-            >🚨 Emergency Help</a
+            ><i data-lucide="siren" class="m-auto"></i> Emergency Help</a
           >
           <a
             href="stay-safe.html"
             class="bg-card border border-border text-white font-bold text-sm px-6 py-3 rounded-xl hover:opacity-90 transition no-underline"
-            >🛡️ Stay Safe Guide</a
+            ><i data-lucide="shield-check" class="m-auto"></i>   Stay Safe Guide</a
           >
         </div>
 
@@ -297,7 +297,7 @@
             0
           </p>
           <p class="text-muted text-xs uppercase tracking-wide font-semibold">
-            🔴 Danger
+           Danger
           </p>
         </div>
 
@@ -311,7 +311,7 @@
             0
           </p>
           <p class="text-muted text-xs uppercase tracking-wide font-semibold">
-            🟠 Warning
+             Warning
           </p>
         </div>
 
@@ -325,7 +325,7 @@
             0
           </p>
           <p class="text-muted text-xs uppercase tracking-wide font-semibold">
-            🟡 Watch
+             Watch
           </p>
         </div>
       </div>
@@ -362,7 +362,7 @@
         <div class="relative flex-1">
           <span
             class="absolute left-4 top-1/2 -translate-y-1/2 text-muted text-sm pointer-events-none"
-            >🔍</span
+            ></span
           >
           <input
             type="text"
@@ -419,9 +419,9 @@
           class="bg-card border border-border rounded-xl text-white text-sm px-4 py-3 outline-none focus:border-sky transition cursor-pointer md:w-44"
         >
           <option value="">All Alerts</option>
-          <option value="danger">🔴 Danger</option>
-          <option value="warning">🟠 Warning</option>
-          <option value="watch">🟡 Watch</option>
+          <option value="danger" class="text-danger"> Danger</option>
+          <option value="warning" class="text-warning"> Warning</option>
+          <option value="watch" class="text-watch"> Watch</option>
         </select>
       </div>
     </section>
@@ -442,7 +442,7 @@
       <div id="reportsList" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
 
       <div id="emptyState" class="hidden text-center py-16">
-        <p class="text-5xl mb-4">✅</p>
+        <p class="text-5xl mb-4"></p>
         <h3 class="text-xl font-semibold mb-2">No Active Alerts Found</h3>
         <p class="text-muted text-sm">
           No flood reports match your search. Try a different area or county.
@@ -458,7 +458,7 @@
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-card border border-border rounded-2xl p-6 text-center">
-          <div class="text-5xl mb-4">📍</div>
+          <div class="text-5xl mb-4"><i data-lucide="pin" class="m-auto text-5xl mb-4"></i>  </div>
           <h3 class="font-semibold text-lg mb-2">Step 1: Report</h3>
           <p class="text-muted text-sm leading-relaxed">
             A resident spots flooding and submits a report with their location,
@@ -467,7 +467,7 @@
         </div>
 
         <div class="bg-card border border-border rounded-2xl p-6 text-center">
-          <div class="text-5xl mb-4">✅</div>
+          <div class="text-5xl mb-4"><i data-lucide="check" class="m-auto text-5xl mb-4"></i> </div>
           <h3 class="font-semibold text-lg mb-2">Step 2: Confirm</h3>
           <p class="text-muted text-sm leading-relaxed">
             Neighbours in the same area confirm the report. More confirmations
@@ -476,7 +476,7 @@
         </div>
 
         <div class="bg-card border border-border rounded-2xl p-6 text-center">
-          <div class="text-5xl mb-4">🔔</div>
+          <div class="text-5xl mb-4"><i data-lucide="bell" class="m-auto text-5xl mb-4"></i>  </div>
           <h3 class="font-semibold text-lg mb-2">Step 3: Stay Safe</h3>
           <p class="text-muted text-sm leading-relaxed">
             Others see the alert, check the Stay Safe guide, and access
@@ -573,7 +573,7 @@
         </div>
 
         <div class="border-t border-border pt-6 text-center text-muted text-xs">
-          © 2026 FloodWatch Kenya — Built to save lives 🌊 &nbsp;|&nbsp; A
+          © 2026 FloodWatch Kenya — Built to save lives  &nbsp;|&nbsp; A
           community project for a safer Kenya
         </div>
       </div>
